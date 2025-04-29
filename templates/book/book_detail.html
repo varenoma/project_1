@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block link %}
+
+{% endblock %}
+
+{% block title %}
+  {{ nomi }}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title text-center">{{ kitob.nomi }}</h1>
+      </div>
+      <div class="card-body">
+        <p>
+          <strong>Muallif:</strong> {{ kitob.muallif }}
+        </p>
+        <p>
+          <strong>Yaratilgan Yil:</strong> {{ kitob.yaratilgan_yil }}
+        </p>
+        <p>
+          <strong>Til:</strong> {{ kitob.til }}
+        </p>
+        <p>
+          <strong>Janr:</strong> {{ kitob.janr }}
+        </p>
+        <p>
+          <strong>Betlar Soni:</strong> {{ kitob.betlar_soni }}
+        </p>
+        <p>
+          <strong>Qisqacha Mazmuni:</strong> {{ kitob.qisqacha_mazmuni }}
+        </p>
+      </div>
+    </div>
+    <a class="btn btn-primary mt-3" href="{% url 'book:book_show_books' %}">Qaytish</a>
+  </div>
+{% endblock %}

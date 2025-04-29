@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+
+{% endblock %}
+
+{% block title %}
+  Bosh sahifa
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="card m-3">
+      <h5 class="card-header">'book.urls'</h5>
+      <div class="card-body">
+        <h5 class="card-title">Books project</h5>
+        <a href="{% url 'book:book_show_books' %}" style="margin: 10px;" class="btn btn-primary">link ulanmagan</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card m-3">
+      <h5 class="card-header">'blog.urls'</h5>
+      <div class="card-body">
+        <h5 class="card-title">Blog project</h5>
+        <a href="#" style="margin: 10px;" class="btn btn-primary">link ulanmagan</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card m-3">
+      <h5 class="card-header">'student.urls'</h5>
+      <div class="card-body">
+        <h5 class="card-title">Student project</h5>
+        <a href="#" style="margin: 10px;" class="btn btn-primary">link ulanmagan</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card m-3">
+      <h5 class="card-header">'product.urls'</h5>
+      <div class="card-body">
+        <h5 class="card-title">Product project</h5>
+        <a href="#" style="margin: 10px;" class="btn btn-primary">link ulanmagan</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
