@@ -5,6 +5,3 @@ from django.urls import reverse
 def home(request):
     return render(request,'app/home.html')
 
-
-def app_to_book(request):
-    return redirect(reverse('show_books'))

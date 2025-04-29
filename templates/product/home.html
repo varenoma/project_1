@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block link %}
+
+{% endblock %}
+
+{% block title %}
+  Product
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      {% for d in data %}
+        <div class="card p-2 m-3" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ d.nomi }}</h5>
+            <p class="card-text">{{ d.malumoti }}</p>
+            <a href="{% url 'product:product_detail' d.id %}" class="card-link">To'liq ma'lumot</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

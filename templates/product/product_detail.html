@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ product.nomi }}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title text-center">{{ product.nomi }}</h1>
+      </div>
+      <div class="card-body">
+        <p>
+          <strong>Mahsulot nomi:</strong> {{ product.nomi }}
+        </p>
+        <p>
+          <strong>Mahsulot haqida:</strong> {{ product.malumoti }}
+        </p>
+        <p>
+          <strong>Narxi:</strong> {{ product.narxi }} so'm
+        </p>
+      </div>
+    </div>
+    <a class="btn btn-primary mt-3" href="{% url 'product:show_products' %}">Orqaga qaytish</a>
+  </div>
+{% endblock %}
