@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block link %}
+
+{% endblock %}
+
+{% block title %}
+  Students
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      {% for d in data %}
+        <div class="card p-2 m-3" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ d.first_name }} {{ d.last_name }}</h5>
+            <p class="card-text">{{ d.email }}</p>
+            <p class="card-text">{{ d.gpa }}</p>
+            <a href="{% url 'student:student_detail' d.id %}" class="card-link">To'liq ma'lumot</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
