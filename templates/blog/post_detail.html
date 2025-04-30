@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ tanla.nomi }}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title text-center">{{ tanla.nomi }}</h1>
+      </div>
+      <div class="card-body">
+        <p>
+          <strong>Blog nomi: </strong> {{ tanla.nomi }}
+        </p>
+        <p>
+          <strong>Blog haqida: </strong> {{ tanla.bio }}
+        </p>
+        <p>
+          <strong>Blog yaratilgan vaqt: </strong> {{ tanla.yaratilgan_vaqt }}
+        </p>
+      </div>
+    </div>
+    <a class="btn btn-primary mt-3" href="{% url 'blog:home' %}">Orqaga qaytish</a>
+  </div>
+{% endblock %}
